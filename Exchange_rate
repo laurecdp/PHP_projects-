@@ -1,0 +1,27 @@
+<?php
+  $riel = 2103942 . " riel";
+  $kyat = 19092 . " kyat";
+  $krones = 109 . " krones";
+  $lek = 9094 . " lek";
+
+echo "I started with $riel, $kyat, $krones, $lek.";
+
+$riel_exchange_rate = 0.000246739;
+$kyat_exchange_rate =  0.000761203;
+$krones_exchange_rate = 0.112633;
+$lek_exchange_rate = 0.400960884; 
+
+$usd_from_riel = $riel * $riel_exchange_rate % 1000000000;
+echo "\nI got $usd_from_riel dollars left.";
+
+$usd_from_kyat =  $kyat * $kyat_exchange_rate % 1000000000;
+echo "\nI got $usd_from_kyat dollars left.";
+
+$usd_from_krones = $krones * $krones_exchange_rate % 1000000000;
+echo "\nI got $usd_from_krones dollars left.";
+
+$usd_from_lek = $lek * $lek_exchange_rate % 1000000000;
+echo "\nI got $usd_from_lek dollars left.";
+
+$final_amount = $usd_from_riel + $usd_from_kyat + $usd_from_krones + $usd_from_lek - 4;
+echo "\nAfter deducting the transactions fees, you'll be recieving $final_amount dollars.";
