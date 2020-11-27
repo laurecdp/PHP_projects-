@@ -1,18 +1,11 @@
 <?php
-function generateStory($singular_noun, $verb, $color, $distance_unit)
-{
-  $story = "The $singular_noun are lovely, $color, and deep.\n" . 
-  "But I have promises to keep, \n" . 
-  "And $distance_unit to go before I $verb, \n" . 
-  "And $distance_unit to go before I $verb.\n" ;
 
-  return $story ;
-};
+$story = "The woods are lovely, dark, and deep.\n" .
+"But I have promises to keep,\n" .
+"And miles to go before I sleep,\n" .
+"And miles to go before I sleep.";
 
-echo generateStory("jam", "draw", "red", "feet");
-echo generateStory("drame", "glimpse", "green", "centimeters");
-echo generateStory("movie", "watch", "yellow", "inches");
+$story = str_replace("eep", "oups", $story);
+$story = str_replace("miles to go", "places to see", $story);
 
-str_replace ($search , $replace, $subject){
-  
-}
+echo $story;
